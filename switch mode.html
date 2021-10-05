@@ -1,0 +1,36 @@
+HTMl
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dark Mode Toggle</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>Dark Mode Toggle</h1>
+	<button 
+    	class="light-mode-button" 
+    	aria-label="Toggle Light Mode" 
+    	onclick="toggle_light_mode()">
+	    <span></span>
+	    <span></span>
+	</button> 
+    </div>
+
+</body>
+<script>
+    function toggle_light_mode() {
+        var app = document.getElementsByTagName("BODY")[0];
+        if (localStorage.lightMode == "dark") {
+        localStorage.lightMode = "light";
+        app.setAttribute("light-mode", "light");
+        } else {
+        localStorage.lightMode = "dark";
+        app.setAttribute("light-mode", "dark");
+        }		
+    }
+    </script>
+    
+</html>
